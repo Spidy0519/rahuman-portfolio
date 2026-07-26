@@ -13,7 +13,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RAHUMAN T // AI/ML ENGINEER",
+  title: "RAHUMAN T | AI/ML ENGINEER",
   description: "Portfolio of Rahuman T, an AI/ML Engineer building real products with surgical precision.",
 };
 

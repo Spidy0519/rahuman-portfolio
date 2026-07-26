@@ -25,6 +25,24 @@
   --spacing-gutter: 24px;
 }
 
+@media (max-width: 768px) {
+  :root {
+    --spacing-margin-safe: 24px;
+  }
+}
+
+/* Global Navbar Fix */
+header.fixed {
+  max-width: 100vw !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -287,3 +305,488 @@ body {
 .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
 .mt-8 { margin-top: 2rem; }
 .ml-4 { margin-left: 1rem; }
+
+/* --- CERTIFICATIONS RESPONSIVE SECTION --- */
+
+/* Base (Mobile 320px - 767px) */
+#certifications {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+
+#certifications h3 {
+  font-size: 44px !important;
+}
+
+#certifications .text-body-lg {
+  font-size: 14px !important;
+}
+
+#certifications .grid {
+  grid-template-columns: 1fr !important;
+  gap: 20px !important;
+}
+
+#certifications .reveal-item.bg-white {
+  padding: 20px !important;
+  border-radius: 0;
+  transform: none !important;
+}
+
+#certifications .group button {
+  width: 100% !important;
+  height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* 375px & 480px & 576px - Mobile scaling */
+@media (min-width: 375px) {
+  #certifications h3 { font-size: 46px !important; }
+}
+
+@media (min-width: 480px) {
+  #certifications h3 { font-size: 48px !important; }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) {
+  #certifications {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  #certifications h3 {
+    font-size: 64px !important;
+  }
+  
+  #certifications .text-body-lg {
+    font-size: 15px !important;
+  }
+  
+  #certifications .grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  
+  #certifications .reveal-item.bg-white {
+    padding: 24px !important;
+    border-radius: 0;
+    transform: none !important;
+  }
+  
+  #certifications .group button {
+    width: 140px !important;
+  }
+}
+
+/* Laptop (1024px - 1439px) */
+@media (min-width: 1024px) {
+  #certifications h3 {
+    font-size: 80px !important;
+  }
+  
+  #certifications .text-body-lg {
+    font-size: 16px !important;
+  }
+  
+  #certifications .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 28px !important;
+  }
+  
+  #certifications .reveal-item.bg-white {
+    padding: 32px !important;
+  }
+  
+  #certifications .reveal-item.bg-white:nth-child(odd) {
+    transform: rotate(-3deg) !important;
+  }
+  
+  #certifications .reveal-item.bg-white:nth-child(even) {
+    transform: rotate(2deg) !important;
+  }
+  
+  #certifications .group button {
+    width: auto !important;
+  }
+}
+
+/* Desktop (1440px+) */
+@media (min-width: 1440px) {
+  #certifications {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  
+  #certifications h3 {
+    font-size: 96px !important;
+  }
+  
+  #certifications .grid {
+    gap: 32px !important;
+  }
+  
+  #certifications .reveal-item.bg-white {
+    padding: 40px !important;
+  }
+}
+
+/* --- HERO RESPONSIVE SECTION --- */
+
+/* Fix horizontal overflow globally on hero */
+.hero-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+  min-height: 100vh !important;
+}
+
+/* Desktop (1440px+) */
+@media (min-width: 1440px) {
+  .hero-section {
+    padding: 120px !important;
+  }
+}
+
+/* Laptop (1200px) */
+@media (max-width: 1200px) {
+  .hero-section {
+    padding: 80px !important;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: 60px !important;
+  }
+
+  .hero-section h1 {
+    font-size: 72px !important;
+  }
+
+  .hero-section h2 {
+    font-size: 40px !important;
+  }
+}
+
+/* Mobile (320px - 767px) */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 24px !important;
+  }
+
+  .hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .hero-section h1 {
+    font-size: 52px !important;
+    line-height: 1.1 !important;
+    transform: none !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Subheading: Mobile 18px */
+  .hero-section h2 {
+    font-size: 18px !important;
+    line-height: 1.15 !important;
+    transform: none !important;
+    margin-top: 12px !important;
+  }
+
+  .hero-section .gap-4 {
+    align-items: center !important;
+    margin-top: 0 !important;
+  }
+
+  /* Button and Location container */
+  .hero-section .gap-6 {
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-top: 32px !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  /* Button */
+  .hero-section button {
+    width: fit-content !important;
+    height: 48px !important;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+    font-size: 16px !important;
+    margin-top: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Location */
+  .hero-section .justify-center {
+    align-items: center !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 { font-size: 48px !important; }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 { font-size: 44px !important; }
+}
+
+@media (max-width: 375px) {
+  .hero-section h1 { font-size: 40px !important; }
+}
+@media (min-width: 768px) {
+  #certifications {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  #certifications h3 {
+    font-size: 64px !important;
+  }
+  
+  #certifications .text-body-lg {
+    font-size: 15px !important;
+  }
+  
+  #certifications .grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  
+  #certifications .reveal-item.bg-white {
+    padding: 24px !important;
+    border-radius: 0;
+    transform: none !important;
+  }
+  
+  #certifications .group button {
+    width: 140px !important;
+  }
+}
+
+/* Laptop (1024px - 1439px) */
+@media (min-width: 1024px) {
+  #certifications h3 {
+    font-size: 80px !important;
+  }
+  
+  #certifications .text-body-lg {
+    font-size: 16px !important;
+  }
+  
+  #certifications .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 28px !important;
+  }
+  
+  #certifications .reveal-item.bg-white {
+    padding: 32px !important;
+  }
+  
+  #certifications .reveal-item.bg-white:nth-child(odd) {
+    transform: rotate(-3deg) !important;
+  }
+  
+  #certifications .reveal-item.bg-white:nth-child(even) {
+    transform: rotate(2deg) !important;
+  }
+  
+  #certifications .group button {
+    width: auto !important;
+  }
+}
+
+/* Desktop (1440px+) */
+@media (min-width: 1440px) {
+  #certifications {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  
+  #certifications h3 {
+    font-size: 96px !important;
+  }
+  
+  #certifications .grid {
+    gap: 32px !important;
+  }
+  
+  #certifications .reveal-item.bg-white {
+    padding: 40px !important;
+  }
+}
+
+/* --- HERO RESPONSIVE SECTION --- */
+
+/* Fix horizontal overflow globally on hero */
+.hero-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+  min-height: 100vh !important;
+}
+
+/* Desktop (1440px+) */
+@media (min-width: 1440px) {
+  .hero-section {
+    padding: 120px !important;
+  }
+}
+
+/* Laptop (1200px) */
+@media (max-width: 1200px) {
+  .hero-section {
+    padding: 80px !important;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: 60px !important;
+  }
+
+  .hero-section h1 {
+    font-size: 72px !important;
+  }
+
+  .hero-section h2 {
+    font-size: 40px !important;
+  }
+}
+
+/* Mobile (320px - 767px) */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 24px !important;
+  }
+
+  .hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .hero-section h1 {
+    font-size: 52px !important;
+    line-height: 1.1 !important;
+    transform: none !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Subheading: Mobile 18px */
+  .hero-section h2 {
+    font-size: 18px !important;
+    line-height: 1.15 !important;
+    transform: none !important;
+    margin-top: 12px !important;
+  }
+
+  .hero-section .gap-4 {
+    align-items: center !important;
+    margin-top: 0 !important;
+  }
+
+  /* Button and Location container */
+  .hero-section .gap-6 {
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-top: 32px !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  /* Button */
+  .hero-section button {
+    width: fit-content !important;
+    height: 48px !important;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+    font-size: 16px !important;
+    margin-top: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Location */
+  .hero-section .justify-center {
+    align-items: center !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 { font-size: 48px !important; }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 { font-size: 44px !important; }
+}
+
+@media (max-width: 375px) {
+  .hero-section h1 { font-size: 40px !important; }
+}
+
+@media (max-width: 320px) {
+  .hero-section h1 { font-size: 36px !important; }
+}
+
+/* --- EXPERIENCE & SKILLS MOBILE FIXES --- */
+
+@media (max-width: 768px) {
+  /* Fix Experience Title Overflow */
+  #experience h3 {
+    font-size: clamp(32px, 12vw, 56px) !important;
+    word-break: break-word;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Fix Contact Title Overflow */
+  #contact h2 {
+    font-size: 64px !important; 
+    word-break: break-all !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+
+  /* Stack Contact Links Vertically (One by one) */
+  #contact .flex-wrap {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important; 
+    width: 100% !important;
+  }
+  
+  #contact a {
+    font-size: 24px !important; /* Slightly larger since they are now stacked */
+    word-break: break-all !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+}
+
+/* Footer mobile fix */
+@media (max-width: 768px) {
+  footer a {
+    word-break: break-all;
+    font-size: 16px !important;
+    letter-spacing: normal !important;
+  }
+}
